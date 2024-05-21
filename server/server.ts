@@ -4,8 +4,13 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import connectDB from './server/config/database'; // Import the database connection
+import loggerMiddleware from './server/middleware/loggerMiddleware'; // Import logger middleware
+import authMiddleware from './server/middleware/authMiddleware'; // Import auth middleware
+import dotenv from 'dotenv';
 
-// The Express app is exported so that it can be used by serverless Functions.
+dotenv.config();
+
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -16,6 +21,14 @@ export function app(): express.Express {
 
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
+
+  // Middleware
+  server.use(express.json());
+  server.use(loggerMiddleware); // Use logger middleware
+  server.use(authMiddleware); // Use auth middleware
+
+  // Connect to the database
+  connectDB();
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
