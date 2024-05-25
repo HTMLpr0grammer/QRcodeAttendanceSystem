@@ -16,7 +16,7 @@ body {
 header {
   background-color: $secondary-color;
   color: white;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ nav ul {
 
   li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 18px;
 
     a {
       color: white;
@@ -40,7 +40,7 @@ footer {
   background-color: $secondary-color;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 13px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
