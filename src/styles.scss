@@ -9,14 +9,14 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
 header {
   background-color: $secondary-color;
   color: white;
-  padding: 16px 0;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ nav ul {
 
   li {
     display: inline;
-    margin: 0 19px;
+    margin: 0 20px;
 
     a {
       color: white;
