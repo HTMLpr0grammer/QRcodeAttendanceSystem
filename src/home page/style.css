@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background-image: url('zdspgcs piksyor.jpg'); /* Adjust path as needed */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed;
+    background-image: url('zdspgcs piksyor.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    
+    
 }
 
 header {
@@ -74,12 +74,15 @@ footer {
     bottom: 0;
 }
 #site-logo {
-    width: 130px;
-    height: 70px;
+    width: 200px;
+    height: 80px;
     display: flex;
-    padding: 5px; 
-    align-items:flex-start;
+    padding: 10px; 
     
+}
+div {
+    font-size:45px;
+    font-weight: 500;
 }
 
 
