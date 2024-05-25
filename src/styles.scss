@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$font-stack: Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  background-color: $secondary-color;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline;
+    margin: 0 10px;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
