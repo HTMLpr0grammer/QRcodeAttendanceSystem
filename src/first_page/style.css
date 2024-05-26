@@ -1,0 +1,225 @@
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('zdspgc4.jpg') no-repeat;
+    background-size:  30%;
+    background-position: center;
+}
+.animation span{
+    position: fixed;
+    top: -120px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    animation: animate 5s linear infinite;    
+}
+.animation span:nth-child(1){
+    left: 60px;
+    animation-delay:0.1s;
+    border: 5px solid cyan;
+}
+.animation span:nth-child(2){
+    left: 60%;
+    animation-delay: 2s;
+    width: 60px;
+    height: 60px;
+    background: #ff4293;
+}
+.animation span:nth-child(3){
+    left: 20%;
+    animation-delay: 3s;
+    border: 5px solid #fff;    
+}
+.animation span:nth-child(4){
+    left: 30%;
+    animation-delay: 2s;
+    width: 80px;
+    height: 80px;
+    background: #befb46;
+}
+.animation span:nth-child(5){
+    left: 40%;
+    animation-delay: 5s;
+    border: 5px solid #ff4293;
+}
+.animation span:nth-child(6){
+    left: 50%;
+    animation-delay: 6s;
+    border: 5px solid deepskyblue;
+}
+.animation span:nth-child(7){
+    left: 60%;
+    animation-delay: 3s;
+    width: 100px;
+    height: 100px;
+    background: #ffd59e;
+}
+.animation span:nth-child(8){
+    left: 70%;
+    animation-delay: 5s;
+    border: 5px solid #befb46;
+}
+.animation span:nth-child(9){
+    left: 80%;
+    animation-delay: 8s;
+    width: 90px;
+    height: 90px;
+    background: cyan;
+}
+.animation span:nth-child(10){
+    left: 90%;
+    animation-delay: 6s;
+    border: 5px solid #fff;    
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+        opacity: 10;
+    }
+    80%{
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+.container {
+    background: transparent;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.form-toggle button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-toggle button:hover {
+    background-color: #141618;
+}
+button {
+    position: relative;
+    padding: 10px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Source Code Pro';
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 2px 2px 22px;
+    border-radius: 4px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+button:focus {
+    outline-color: transparent;
+    box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+button::after {
+    content: var(--content);
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    padding: 40px 40px;
+    pointer-events: none;
+}
+
+button::after {
+    font-weight: 200;
+    top: -30px;
+    left: -20px;
+}
+
+.right, .left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.right {
+    left: 66%;
+}
+.left {
+    right: 66%;
+}
+.right::after {
+    top: -30px;
+    left: calc(-66% - 20px);
+    background-color: var(--bg-color);
+    color: transparent;
+    transition: transform .4s ease-out;
+    transform: translate(0, -90%) rotate(0deg);
+}
+
+button:hover .right::after {
+    transform: translate(0, -47%) rotate(0deg);
+}
+
+button .right:hover::after {
+    transform: translate(0, -50%) rotate(-7deg);
+}
+
+button .left:hover ~ .right::after {
+    transform: translate(0, -50%) rotate(7deg);
+}
+
+/* bubbles */
+button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+        radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+    from {
+        transform: translate();
+    }
+    to {
+        transform: translate(0, -66.666%);
+    }
+}
+
+:root {
+    --text-color: #fff; /* Changed text color to white */
+    --shadow-color: hsla(140, 40%, 52%, .4);
+    --btn-color: hsl(140, 80%, 42%);
+    --bg-color: #141218;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+</head>
+<body>
+    <div class="change-password-container">
+        <h2>Change Password</h2>
+        <form (ngSubmit)="onSubmit()" #passwordForm="ngForm">
+            <div>
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword" required [(ngModel)]="currentPassword" name="currentPassword" #currentPasswordInput="ngModel">
+                <div *ngIf="currentPasswordInput.invalid && currentPasswordInput.touched">
+                    Current password is required.
+                </div>
+            </div>
+            <div>
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required [(ngModel)]="newPassword" name="newPassword" #newPasswordInput="ngModel">
+                <div *ngIf="newPasswordInput.invalid && newPasswordInput.touched">
+                    New password is required.
+                </div>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" required [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel">
+                <div *ngIf="confirmPasswordInput.invalid && confirmPasswordInput.touched">
+                    Confirm password is required.
+                </div>
+                <div *ngIf="newPassword !== confirmPassword && confirmPasswordInput.touched">
+                    Passwords do not match.
+                </div>
+            </div>
+            <button type="submit" [disabled]="passwordForm.invalid">Change Password</button>
+        </form>
+    </div>
+    
+</body>
+</html>
