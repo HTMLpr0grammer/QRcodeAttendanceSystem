@@ -3,53 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="registration.css">
 </head>
 <body>
-    <form action="submit_registration.php" method="post">
-        <h2>Registration Form</h2>
-        <div class="form-group">
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required>
-        </div>
-        <div class="form-group">
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required>
-        </div>
-        <div class="form-group">
-            <label for="gender">Gender:</label>
+  <div class="animation">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+    
+    <div class="container">
+        <form action="#" method="post" class="registration-form">
+            <h2>Register</h2>
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+
+            <label for="gender">Gender</label>
             <select id="gender" name="gender" required>
-                <option value="">Select Gender</option>
+                <option value="" disabled selected>Select your gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
-        </div>
-        <div class="form-group">
-            <label for="course">Course:</label>
-            <input type="text" id="course" name="course" required>
-        </div>
-        <div class="form-group">
-            <label for="idnumber">ID Number:</label>
-            <input type="text" id="idnumber" name="idnumber" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@zdspgc\.edu\.ph$" required>
-            <small>Please use your institutional email e.g@zdspgc.edu.ph</small>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-            <label for="confirmpassword">Confirm Password:</label>
-            <input type="password" id="confirmpassword" name="confirmpassword" required>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Register">
-        </div>
-    </form>
+
+            <label for="course">Course</label>
+            <input type="text" id="course" name="course" placeholder="Enter your course" required>
+
+            <label for="idnumber">ID Number</label>
+            <input type="text" id="idnumber" name="idnumber" placeholder="Enter your ID number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter a username" required>
+
+            <button type="submit">
+                <div class="left"></div>
+                Register 
+                <div class="right"></div>
+            </button>
+
+            <a target="_blank" href="https://twitter.com/kamildyrek">
+                <svg style="width:2em;height:2em;position:fixed;top:1em;left:1em;opacity:.8;" viewBox="0 0 24 24">
+                    <path fill="#fff" d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" />
+                </svg>
+            </a>
+        </form>
+    </div>
 </body>
 </html>
