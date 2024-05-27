@@ -19,7 +19,7 @@ body {
 
 .animation span{
     position: fixed;
-    top: -120px;
+    top: -119px;
     height: 50px;
     width: 50px;
     z-index: -1;
@@ -45,8 +45,8 @@ body {
 .animation span:nth-child(4){
     left: 30%;
     animation-delay: 2s;
-    width: 80px;
-    height: 80px;
+    width: 79px;
+    height: 79px;
     background: #befb46;
 }
 .animation span:nth-child(5){
@@ -62,8 +62,8 @@ body {
 .animation span:nth-child(7){
     left: 60%;
     animation-delay: 3s;
-    width: 100px;
-    height: 100px;
+    width: 99px;
+    height: 99px;
     background: #ffd59e;
 }
 .animation span:nth-child(8){
@@ -74,8 +74,8 @@ body {
 .animation span:nth-child(9){
     left: 80%;
     animation-delay: 8s;
-    width: 90px;
-    height: 90px;
+    width: 89px;
+    height: 89px;
     background: cyan;
 }
 .animation span:nth-child(10){
