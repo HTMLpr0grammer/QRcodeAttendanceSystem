@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar .nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar .nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar .nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar .footer {
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-info, .attendance-record {
+    margin-bottom: 20px;
+}
+
+.profile-info table, .attendance-record table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.profile-info table th, .profile-info table td, .attendance-record table th, .attendance-record table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.profile-info table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.attendance-record table th {
+    background-color: #2c3e50;
+    color: white;
+    text-align: left;
+}
+
+.attendance-record .record-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.attendance-record .show-entries label {
+    margin-right: 10px;
+}
+
+.attendance-record .search {
+    display: flex;
+    align-items: center;
+}
+
+.attendance-record .search input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.attendance-record .search button {
+    padding: 5px 10px;
+}
+
+.attendance-record .circle {
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination .nav-buttons button {
+    padding: 5px 10px;
+}

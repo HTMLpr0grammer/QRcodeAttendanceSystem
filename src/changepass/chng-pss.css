@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('bschangepss.jpg') no-repeat;
+    background-size:  100%;
+    background-position: center;
+}
+
+.change-password-container {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #0a0808;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: #007BFF;
+}
+
+.error-message {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #d9534f;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #053a03;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #03274d;
+}
+
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
