@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Record</title>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #28e01e;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #2f83c7;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    select {
+        padding: 5px;
+        border: 1px solid #d12d2d;
+        border-radius: 3px;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    select:focus {
+        outline: none;
+        border-color: #de0c0c;
+    }
+</style>
+</style>
+</head>
+<body>
+
+<h2>Attendance Record</h2>
+<p id="date"></p> <!-- Add an element to display the date -->
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Frenshyll kizze Flores</td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+
+
+        
+        <tr>
+            <td>Regine Sino</td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>Kimberly Obradas</td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Lovely Jane Colis</td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+            <td><select>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // JavaScript to get and display the current date
+    var today = new Date();
+    var dateElement = document.getElementById('date');
+    dateElement.textContent = 'Date: ' + today.toDateString();
+</script>
+
+</body>
+</html>
