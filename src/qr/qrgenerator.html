@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport"
-		content="width=device-width, 
-						initial-scale=1.0" />
-	<title>QR Code Generator</title>
-	<style>
-		h1, h3 {
-		color: green;
-		}
-		body, header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		}
-	</style>
-
-	<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="QRcodeAttendanceSystem-Frontend/src/qr/qrgenerator.css">
 </head>
 
 <body>
-	<header>
-		<h1>Generate Code</h1>
-		<h3>Fill up the following to generate code</h3>
-	</header>
-	<main>
-		<form action="/"
-			id="qr-generation-form">
-			<input type="text"
-				name="qr-code-content"
-				id="qr-content"
-				value=""
-				placeholder="Enter QR Label"
-				autocomplete="off" />
-			<input type="submit"
-				value="Generate QR Code" />
-		</form><br />
-		<div id="qr-code"></div>
-	</main>
+    <div class="container">
+        <form id="qr-form">
+            <h1>QR Code Generator</h1>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="class">Class Name</label>
+                <input type="text" id="class" name="class" placeholder="Enter class name" required>
+            </div>
+            <div class="form-group">
+                <label for="start-time">Start Time</label>
+                <input type="time" id="start-time" name="start-time" required>
+            </div>
+            <div class="form-group">
+                <label for="end-time">End Time</label>
+                <input type="time" id="end-time" name="end-time" required>
+            </div>
+            <button type="submit">Generate QR Code</button>
+        </form>
+    </div>
+
+    <div id="qrPopup" class="qr-popup">
+        <div class="qr-popup-content">
+            <span id="popupTextAbove">QR of the day</span>
+            <div id="qrcode"></div>
+            <span id="popupTextBelow">Scan to get class details</span>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
 </body>
-<script>
-	let qrContentInput = document.getElementById("qr-content");
-	let qrGenerationForm = 
-	document.getElementById("qr-generation-form");
-	let qrCode;
-	
-	function generateQrCode(qrContent) {
-	return new QRCode("qr-code", {
-		text: qrContent,
-		width: 350,
-		height: 350,
-		colorDark: "#000000",
-		colorLight: "#ffffff",
-		correctLevel: QRCode.CorrectLevel.H,
-	});
-	}
-	
-	// Event listener for form submit event
-	qrGenerationForm.addEventListener("submit", function (event) {
-	// Prevent form submission
-	event.preventDefault();
-	let qrContent = qrContentInput.value;
-	if (qrCode == null) {
+
+	<script>
+		//apil nalang js .....
+		document.getElementById('qr-form').addEventListener('submit', function(event) {
+		event.preventDefault();
+
+		const date = document.getElementById('date').value;
+		const className = document.getElementById('class').value;
+		const startTime = document.getElementById('start-time').value;
+		const endTime = document.getElementById('end-time').value;
+
+		if (!date || !className || !startTime || !endTime) {
+			alert('All fields are required!');
+			return;
+		}
+
+		const qrData = `Date: ${date}\nClass: ${className}\nStart Time: ${startTime}\nEnd Time: ${endTime}`;
+
+		const qrCodeElement = document.getElementById('qrcode');
+		qrCodeElement.innerHTML = '';
+		new QRCode(qrCodeElement, qrData);
 		
-		// Generate code initially
-		qrCode = generateQrCode(qrContent);
-	} else {
-		
-		// If ni generate ug balik ang code
-		// generate usab using same object
-		qrCode.makeCode(qrContent);
-	}
+		document.getElementById('qrPopup').style.display = 'flex';
 	});
-</script>
+
+	function closePopup() {
+		document.getElementById('qrPopup').style.display = 'none';
+	}
+	</script>
 
 </html>
